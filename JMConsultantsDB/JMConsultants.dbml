@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MasianoJanzebConsultants" Class="JMConsultantsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Zeb\Desktop\JMConsultants\MasianoJanzebConsultants.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="JMConsultantsDB.Properties.Settings" SettingsPropertyName="MasianoJanzebConsultantsConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.sproc_tblGP_Get_GP_numbers" Method="sproc_tblGP_Get_GP_numbers">
+    <ElementType Name="sproc_tblGP_Get_GP_numbersResult">
+      <Column Name="JM_GPNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sproc_GetMedicalSchoolDetails" Method="sproc_GetMedicalSchoolDetails">
+    <Parameter Name="MedicalSchoolCode" Parameter="medicalSchoolCode" Type="System.String" DbType="VarChar(4)" />
+    <ElementType Name="sproc_GetMedicalSchoolDetailsResult">
+      <Column Name="JM_MedicalSchoolCode" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="JM_Name" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="JM_University" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JM_Established" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JM_Comments" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="JM_Award" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sproc_tblGP_Get_GPName_and_MedSchool" Method="sproc_tblGP_Get_GPName_and_MedSchool">
+    <Parameter Name="GPNo" Parameter="gPNo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sproc_tblGP_Get_GPName_and_MedSchoolResult">
+      <Column Name="JM_Name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="JM_MedicalSchoolCode" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sproc_tblPracticeGP_Get_PracticeGPNos" Method="sproc_tblPracticeGP_Get_PracticeGPNos">
+    <ElementType Name="sproc_tblPracticeGP_Get_PracticeGPNosResult">
+      <Column Name="JM_PracticeGPNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sproc_tblPracticeGP_Get_HighesPracticeGPNo" Method="sproc_tblPracticeGP_Get_HighesPracticeGPNo">
+    <ElementType Name="sproc_tblPracticeGP_Get_HighesPracticeGPNoResult">
+      <Column Name="maxJM_PracticeGPNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
