@@ -1,0 +1,2 @@
+# Masiano-Medical-Consultancy
+[University 1st Year - Term 2] Make believe medical consultants utillizing MDI forms and WinForms. Search GP Information within given dates. Add, edit, delete GP data, including GP Practice allocation days. Generate printable graphical and statistical reports for cost of appointments within specified dates. Reports contain togglable menus for each consultant, revealing or hiding specified data. Created a RDMS, and used LINQ to access data using C#.
